@@ -1,1 +1,227 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ryan Pereira - SNHU ePortfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ryan Pereira">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/styles/global.css">
+    </head>
+    <body>
+        <header>
+            <h1>Ryan Pereira</h1>
+            <p>Bachelor of Science in Computer Science</p>
+            <p>Southern New Hampshire University</p>
+        </header>
+        <div id="main-content">
+            <main>
+                <article id="summary">
+                    <h2>Coursework and Program Summary</h2>
+                    <p>
+                        In the realm of software engineering, we work from an abstract idea and break down necessities
+                        into components based on what we know users will need. This covers beyond pure functionality
+                        - which is composed of many more components such as database organization, interactivity
+                        between different systems or containers, and both frontend and backend behaviors - and
+                        extends to security, performance, and other non-functional aspects. Through my capstone software artifact
+                        enhancements, these were all necessary to address; although the functionality is the most focal
+                        aspect of the implementation, the user experience will be significantly impacted with poor
+                        security and performance in place. This was no different for any other project I have completed
+                        through SNHU, UNH, and independent implementations, as all have involved the completion of
+                        functional code while keeping these aspects in mind.
+                    </p>
+                    <p>
+                        Throughout my time in the degree program and through my own projects, I've written secure C code, ensuring
+                        to avoid buffer overflows, memory leaks, and other memory-related errors, and developed secure
+                        authentication mechanisms when necessary through the use of cryptographically secure
+                        hashing algorithms and signed tokens. I've written efficient sorting and search algorithms in Java, C, and
+                        C++ using loops and recursion (where the call stack wasn't at risk of overflowing),
+                        including insertion sorts, selection sorts, merge sorts, and binary searches. I've written data
+                        structures intended for a variety of purposes including queues, sets, maps, unordered maps
+                        (using hashes), and linked lists (single and double). I've worked with a team to develop a
+                        full-stack application using MongoDB, Express, and Node.JS (MEN stack), requiring secure
+                        authentication mechanisms (which I implemented with cookies and a session ID database
+                        collection). Where rubrics were defined in regard to a specific set of tasks, I succeeded in
+                        delivering applications that fulfilled the criteria.
+                    </p>
+                    <p>
+                        In a more professional sense, I also completed tasks assigned by management at my internship at Orbita, inc.,
+                        which included modifying backend and frontend TypeScript as well as developing utilities to parse publicly
+                        available information into CSV and JSON datasets required by other projects. This opportunity provided
+                        me with great experience in regard to Bitbucket, where I built on top of that knowledge at UNH
+                        through GitLab and at SNHU through GitHub. I host my own GitLab server as well, so I've
+                        become very comfortable with using Git as a version control client.
+                    </p>
+                    <p>
+                        The original artifact used for the capstone project is a project from CS 340 Client-Server
+                        Development. This program was written in Python
+                        and allowed client interactivity with a MongoDB database through the Dash library, presenting a
+                        table of animal data that the user may modify along with graphical data rendered using Plotly.
+                        This library was very fit for the purpose, operating with
+                        custom callbacks triggered by decorators bound to table updates. I decided to convert this
+                        program into a more customizable and expansive project, creating a similar implementation in
+                        TypeScript. I also prefer the type-strictness of the language and the usage of the Node.js event
+                        loop, as it's a great single-threaded implementation on the server-side that can easily be
+                        replicated after the image is built. The server operates using Express running on Node.js,
+                        serving Pug template files and client-side JavaScript for binding event listeners.
+                    </p>
+                    <p>
+                        The first enhancement consisted of this MEN stack and some Docker configuration files, the latter being
+                        very useful during building and testing. It also included sample data of processes, each entry
+                        including a process ID, name, start time, and duration. The second enhancement focused
+                        mostly on client-side WebAssembly compiled from C (using Emscripten), which takes the data
+                        from the process table defined by the user to use one of five scheduling algorithms to return a
+                        set of "frames" to the JavaScript. This data is parsed to a series of timeouts represented over
+                        time in the live table. The third enhancement focused on an authentication mechanism with
+                        JSON web tokens and the scrypt hashing algorithm, the REST API for the frontend to interact
+                        with (through three new form pages or through directly editing the table), and a random process
+                        generator to fill the database with. These artifacts directly contribute to the necessity of
+                        producing a functional, algorithmically efficient, and secure implementation, and they represent
+                        many of the web-based and lower level concepts that I'm interested in being involved with for
+                        my software engineering career.
+                    </p>
+                </article>
+                <article>
+                    <h2>Video Presentation</h2>
+                    <iframe width="800" height="450" src="https://www.youtube.com/watch?v=NDA2EPIqa10"></iframe>
+                </article>
+                <article id="artifacts">
+                    <h2>Artifacts</h2>
+                    <p>
+                        To keep the project from being easier to find, the initial artifact may be downloaded <a href="/initial-artifact.zip" download>here</a>.
+                    </p>
+                    <p>
+                        The source of the finalized project can be found on GitHub <a href="https://github.com/rpereirasnhu/cs499">here</a>.
+                        To get it running, the README provides information on dependencies and the build process.
+                    </p>
+                </article>
+                <article id="enhancement-1">
+                    <h2>Enhancement One</h2>
+                    <p>
+                        This artifact was developed for about a day prior to 9/29/2024, adding
+                        similar features as in the original program such as database data retrieval (using a
+                        GET request from the client), a nicely-formatted table, and a chart with a legend.
+                        The entire development environment gets more complicated with Docker tools, although they
+                        make the development process significantly easier to manage. The backend runs
+                        using Express on the Node.js runtime, which runs ESM JavaScript compiled from TypeScript (used for type-
+                        strictness and organization). The frontend simply uses JavaScript, although this can easily be converted
+                        into TypeScript if the client-side behavior becomes too bulky to manage. The main database
+                        collection "spm" contains five sample process entries.
+                    </p>
+                    <p>
+                        This artifact demonstrates the implementation of a full-stack using middleware solutions,
+                        MongoDB database interactivity, client-side JavaScript, organized TypeScript typing, a
+                        REST API, and proper error handling. The ability to write a MEN-related or any
+                        full-stack application is crucial to understanding web development, which is a dominant
+                        portion of the CS job market. I've demonstrated an ability to write secure and organized
+                        code as well as properly implement an API for the client to interact with. The main
+                        improvements include a more customizable infrastructure on the backend in addition to
+                        nicely formatted and styled representations of data, including the Tabulator table and
+                        Chart.js chart (which replace Dash and Plotly, respectively). These appear better in my opinion,
+                        and they are highly configurable to allow for other expansive additions.
+                    </p>
+                    <p>
+                        I've implemented this form of artifact multiple times in the past, but this was good
+                        practice for focusing more on the development aspects and keeping build and runtime
+                        utilities simple and concise. I also re-familiarized myself with running MongoDB scripts
+                        after authenticating as root, as I've done so in the past but needed to reference documentation
+                        to find the preferred syntax to use (e.g. using a specific method over a <em>Mongosh</em> mechanism not
+                        recognized as JavaScript). I've made the process "too automated" before, making it easy to over-complicate
+                        a simple concept. Some challenges I faced involved Express callbacks and error handlers,
+                        which may include a "next" method as a parameter if necessary but requires careful usage
+                        for reliable execution order. Also, while I was figuring out whether to import client-side
+                        modules manually (through hosting the modules myself) or to import them through a
+                        CDN, TypeScript was becoming too strict and refusing compilation (mostly an issue
+                        when importing from CDNs).
+                    </p>
+                </article>
+                <article id="enhancement-2">
+                    <h2>Enhancement Two</h2>
+                    <p>
+                        I've created the majority of this enhancement's functionality within three or four days
+                        of 10/10/2024. This uses WebAssembly (compiled from C using Emscripten) to
+                        return a string of frames back to the main JavaScript code to display how a process manager might handle
+                        the provided processes given the selected algorithm (round robin, first-come first-serve,
+                        last-come first-serve, shortest job first, and longest job first). The "start" button runs the web
+                        assembly, which triggers a JavaScript function that creates some number of timeouts in its
+                        queue to represent the parsed frames sequentially.
+                    </p>
+                    <p>
+                        This artifact represents my ability to implement double-linked lists in C, sorting algorithms,
+                        scheduling algorithms, and the usage of a custom character parser. This enhancement also
+                        demonstrates my ability to safely allocate, free, copy, and concatenate C strings, such as
+                        through "mallocs" and using the "n" variations of string functions when handling variable-length strings (e.g. snprintf, strncpy, strncat).
+                        The artifact has been improved through adding a live table element to the page.
+                    </p>
+                    <p>
+                        I learned a great amount about how to use Emscripten to compile C code and how to implement
+                        a simple process manager. It's also been a while since I've implemented sorting and utility
+                        algorithms (e.g. add, remove, etc) using pointers and linked lists, so this was great practice for
+                        the lower level programming I'd like to move towards as I get closer starting my career. Some
+                        challenges I faced included erroneous parsing (from the C end, as Unicode invalid to my
+                        expected format was being returned) and erroneous loops (one of which caused my browser to
+                        use over 19 GB of RAM).
+                    </p>
+                </article>
+                <article id="enhancement-3">
+                    <h2>Enhancement Three</h2>
+                    <p>
+                        This artifact (created throughout a week prior to 10/20/2024) is composed of backend and frontend
+                        files which act to provide authentication and database-related functionalities. The log-in mechanism
+                        uses the <em>node:crypto</em> library to use the <em>scrypt</em> hashing algorithm, which accepts a
+                        salt and plaintext input. The parameters are configured using OWASP's recommended settings to ensure
+                        that in the event of a data breach, passwords are not easily decipherable. Only one user exists, named
+                        "default", with a password of "default123" for simplicity. Users must log in to access any other page,
+                        where they will be redirected to the log-in page otherwise. The database aspects include the REST API
+                        extension (now supporting POST, PUT, and DELETE requests for process entries on top of the already
+                        existing GET functionality), three new pages allowing for creating, editing, and deleting
+                        processes, an interactive table on the dashboard where existing processes can be edited
+                        (where unsuccessful requests return the table to its initial state), and the ability to randomly
+                        generate 1-64 processes in the collection at once. These additions added a navigation bar to
+                        the top, containing all active non-REST links as well as a "log out" behavior to clear the cookie storing the token.
+                    </p>
+                    <p>
+                        This artifact demonstrates my skills regarding database interactivity and secure authentication
+                        mechanisms. The usage of the <em>scrypt</em> function represents my attention to ensuring secure
+                        hashes are being generated in the "users" collection, and my usage of signed cookies and a
+                        JWT secret also represent my attention to securing data at rest. The initial artifact was more simplistic
+                        for implementing client-database logic via the Dash library, though less customizable; TypeScript is
+                        much easier to maintain and expand upon, and Node.js offers better performance with an engine serving a highly compatible
+                        purpose (being based around an event loop). The initial artifact also did not include an authentication mechanism or API which
+                        can be interfaced via Postman and similar clients, whereas dynamics like this are embraced in
+                        the new implementation.
+                    </p>
+                    <p>
+                        On many occasions, I ran into issues with body parameters involved with the REST API; this
+                        was mostly during validation (such as ensuring the fields are present and valid to what the
+                        backend wants) where errors are thrown and handled by a consistent handler. I also ran into
+                        some issues with the Tabulator library, as the documentation wasn't entirely clear with how to
+                        register the "EditModule" module in the area that I was expecting it to. These issues were fixed
+                        through incremental tests and verifying expected behaviors after minimal tweaks.
+                    </p>
+                </article>
+            </main>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#summary">Coursework and Program Summary</a>
+                    </li>
+                    <li>
+                        <a href="#artifacts">Artifacts</a>
+                    </li>
+                    <li>
+                        <a href="#presentation">Video Presentation</a>
+                    </li>
+                    <li>
+                        <a href="#enhancement-1">Enhancement One</a>
+                    </li>
+                    <li>
+                        <a href="#enhancement-2">Enhancement Two</a>
+                    </li>
+                    <li>
+                        <a href="#enhancement-3">Enhancement Three</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>
